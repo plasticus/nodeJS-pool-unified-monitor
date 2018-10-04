@@ -207,10 +207,10 @@ function getPoolStats(poolID, poolURL) {
             networkDiff     = data.network.difficulty;
         }
 
-		var poolHeight = 'N/A';
-		if (data.network) {
-			poolHeight = data.network.height;
-		}
+	var poolHeight = 'N/A';
+	if (data.network) {
+		poolHeight = data.network.height;
+	}
 
         var hashPower = 'N/A';
         if (data.pool && data.network) {
@@ -220,7 +220,7 @@ function getPoolStats(poolID, poolURL) {
 
         var blocksFound = data.pool.totalBlocks.toString();
 
-//		  var daemonStatus = data.daemon.lastStatus;
+//	var daemonStatus = data.daemon.lastStatus;
 //      var walletStatus = data.wallet.lastStatus;
 
         var cnAlgorithm = data.config.cnAlgorithm || "cryptonight";
@@ -255,7 +255,7 @@ function getPoolStats(poolID, poolURL) {
         updateText(poolID + '_blocksFound', blocksFound);
         updateText(poolID + '_algorithm', algorithm);
         updateText(poolID + '_poolHeight', poolHeight);
-		    uptdateText(poolID + '_daemonStatus', daemonStatus);
+	uptdateText(poolID + '_daemonStatus', daemonStatus);
     });
 }
 
