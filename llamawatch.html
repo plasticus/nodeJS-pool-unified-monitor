@@ -207,10 +207,10 @@ function getPoolStats(poolID, poolURL) {
             networkDiff     = data.network.difficulty;
         }
 
-		var poolHeight = 'N/A';
-		if (data.network) {
-			poolHeight = data.network.height;
-		}
+	var poolHeight = 'N/A';
+	if (data.network) {
+		poolHeight = data.network.height;
+	}
 
         var hashPower = 'N/A';
         if (data.pool && data.network) {
@@ -220,8 +220,13 @@ function getPoolStats(poolID, poolURL) {
 
         var blocksFound = data.pool.totalBlocks.toString();
 
-//		  var daemonStatus = data.daemon.lastStatus;
+//	Keeping these here so I know the API calls for them
+//	var daemonStatus = data.daemon.lastStatus;
+//	var daemonLastCheck = data.daemon.
+//	var daemonLastFail = data.daemon.
 //      var walletStatus = data.wallet.lastStatus;
+//	var walletLastCheck = data.wallet
+//	var walletLastFail = data.wallet
 
         var cnAlgorithm = data.config.cnAlgorithm || "cryptonight";
         var cnVariant = data.config.cnVariant || 0;
@@ -255,7 +260,7 @@ function getPoolStats(poolID, poolURL) {
         updateText(poolID + '_blocksFound', blocksFound);
         updateText(poolID + '_algorithm', algorithm);
         updateText(poolID + '_poolHeight', poolHeight);
-		    uptdateText(poolID + '_daemonStatus', daemonStatus);
+	uptdateText(poolID + '_daemonStatus', daemonStatus);
     });
 }
 
@@ -264,6 +269,14 @@ function getCheckTime(timestamp) {
     return timestamp ? $.timeago(new Date(timestamp * 1000).toISOString()) : null;
 }
 
+// Check for Failure
+function failCheck() {
+  var failCheck = false;
+    if (poolHeight < compHeight) {
+      failCheck = true;
+    } 
+}
+	
 // Get stats from comp pool API
 function getCompPoolStats(compID, compURL) {
     var compApiURL = compURL + '/stats';
@@ -292,11 +305,11 @@ function updatePools() {
 // Update comp pools
 function updateCompPools() {
     getCompPoolStats('trtl', 'http://turtlepool.space:8117');
-    getCompPoolStats('sumo', 'http://pool.llama.horse:19732');
+    getCompPoolStats('sumo', 'https://pool.sumokoin.com:9118');
     getCompPoolStats('amit', 'http://amit.youpool.io:8124');
-    getCompPoolStats('ncp', 'http://pool.llama.horse:21238');
+    getCompPoolStats('ncp', 'http://185.141.24.209:8117');
     getCompPoolStats('xtri', 'http://pool.llama.horse:8117');
-    getCompPoolStats('etn', 'http://pool.llama.horse:8120');
+    getCompPoolStats('etn', 'http://electroneum.mining-pool.info:8117');
 }
 
 // Initialize
