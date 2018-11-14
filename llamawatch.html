@@ -90,23 +90,23 @@
     </div></div>
 
     <div class="col-md-4 col-sm-6"><div id="coin">
-        <a href="http://amit.llama.horse/">
-            <span class="name">Amity Coin (AMIT)<img src="img/coinlogos/amitycoin.png"></span>
+        <a href="http://plura.llama.horse/">
+            <span class="name">Amity Coin (AMIT)<img src="img/coinlogos/pluracoin.png"></span>
             <ul class="stats">
-                <li><strong><span id="amit_poolMiners">...</span></strong> active miners</span></li>
-                <li><strong><span id="amit_poolHashrate">...</span></strong> pool hashrate</span></li>
-                <li><strong><span id="amit_networkHashrate">...</span></strong> network hashrate</span></li>
-                <li><strong><span id="amit_hashPower">...</span></strong> of network hashrate</span></li>
-                <li><strong><span id="amit_blocksFound">...</span></strong> blocks found</span></li>
-                <li><strong><span id="amit_algorithm">...</span></strong> algorithm</span></li>
-                <li><strong><span id="amit_poolHeight">...</span></strong> height</span></li>
-                <li><strong><span id="amit_compHeight">...</span></strong> comp height</span></li>
-                <li><strong><span id="amit_daemonStatus">...</span></strong> daemon status</span></li>
-                <li><strong><span id="amit_daemonLastCheck">...</span></strong> daemon last check</span></li>
-                <li><strong><span id="amit_daemonLastFail">...</span></strong> deamon last fail</span></li>
-                <li><strong><span id="amit_walletStatus">...</span></strong> wallet status</span></li>
-                <li><strong><span id="amit_walletLastCheck">...</span></strong> wallet last check</span></li>
-                <li><strong><span id="amit_walletLastFail">...</span></strong> wallet last fail</span></li>
+                <li><strong><span id="plura_poolMiners">...</span></strong> active miners</span></li>
+                <li><strong><span id="plura_poolHashrate">...</span></strong> pool hashrate</span></li>
+                <li><strong><span id="plura_networkHashrate">...</span></strong> network hashrate</span></li>
+                <li><strong><span id="plura_hashPower">...</span></strong> of network hashrate</span></li>
+                <li><strong><span id="plura_blocksFound">...</span></strong> blocks found</span></li>
+                <li><strong><span id="plura_algorithm">...</span></strong> algorithm</span></li>
+                <li><strong><span id="plura_poolHeight">...</span></strong> height</span></li>
+                <li><strong><span id="plura_compHeight">...</span></strong> comp height</span></li>
+                <li><strong><span id="plura_daemonStatus">...</span></strong> daemon status</span></li>
+                <li><strong><span id="plura_daemonLastCheck">...</span></strong> daemon last check</span></li>
+                <li><strong><span id="plura_daemonLastFail">...</span></strong> deamon last fail</span></li>
+                <li><strong><span id="plura_walletStatus">...</span></strong> wallet status</span></li>
+                <li><strong><span id="plura_walletLastCheck">...</span></strong> wallet last check</span></li>
+                <li><strong><span id="plura_walletLastFail">...</span></strong> wallet last fail</span></li>
             </ul>
         </a>
     </div></div>
@@ -310,7 +310,7 @@ function getAdminStats(poolID, poolURL) {
 function updatePools() {
     getPoolStats('trtl', 'http://pool.llama.horse:8118');
     getPoolStats('sumo', 'http://pool.llama.horse:19732');
-    getPoolStats('amit', 'http://pool.llama.horse:8121');
+    getPoolStats('plura', 'http://pool.llama.horse:19204');
     getPoolStats('ncp', 'http://pool.llama.horse:21238');
     getPoolStats('ple', 'http://pool.llama.horse:44018');
     getPoolStats('etn', 'http://pool.llama.horse:8120');
@@ -320,7 +320,7 @@ function updatePools() {
 function updateAdminStats() {
     getAdminStats('trtl', 'http://pool.llama.horse:8118');
     getAdminStats('sumo', 'http://pool.llama.horse:19732');
-    getAdminStats('amit', 'http://pool.llama.horse:8121');
+    getAdminStats('plura', 'http://pool.llama.horse:19204');
     getAdminStats('ncp', 'http://pool.llama.horse:21238');
     getAdminStats('ple', 'http://pool.llama.horse:44018');
     getAdminStats('etn', 'http://pool.llama.horse:8120');
@@ -330,7 +330,7 @@ function updateAdminStats() {
 function updateCompPools() {
     getCompPoolStats('trtl', 'http://turtlepool.space:8117');
     getCompPoolStats('sumo', 'https://pool.sumokoin.com:9118');
-    getCompPoolStats('amit', 'http://amit.youpool.io:8124');
+    getCompPoolStats('plura', 'http://plura.superpools.online:8117');
     getCompPoolStats('ncp', 'http://185.141.24.209:8117');
     getCompPoolStats('ple', 'https://crypto9coin.cf:44019');
     getCompPoolStats('etn', 'http://electroneum.mining-pool.info:8117');
